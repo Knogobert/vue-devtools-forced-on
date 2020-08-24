@@ -10,13 +10,13 @@ const curVersion = pkg.version
   const { newVersion } = await inquirer.prompt([{
     type: 'input',
     name: 'newVersion',
-    message: `Please provide a version (current: ${curVersion}):`,
+    message: `Please provide a version (current: ${curVersion}):`
   }])
 
-  if (!semver.valid(newVersion)) {
-    console.error(`Invalid version: ${newVersion}`)
-    process.exit(1)
-  }
+  // if (!semver.valid(newVersion)) {
+  //   console.error(`Invalid version: ${newVersion}`)
+  //   process.exit(1)
+  // }
 
   if (semver.lt(newVersion, curVersion)) {
     console.error(`New version (${newVersion}) cannot be lower than current version (${curVersion}).`)
