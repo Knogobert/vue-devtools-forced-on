@@ -20,7 +20,7 @@ function detect (win) {
       }
 
       win.postMessage({
-        devtoolsEnabled: Vue && Vue.config.devtools,
+        devtoolsEnabled: Vue, // && Vue.config.devtools,
         vueDetected: true,
         nuxtDetected: true
       }, '*')
@@ -43,7 +43,7 @@ function detect (win) {
         Vue = Vue.super
       }
       win.postMessage({
-        devtoolsEnabled: Vue.config.devtools,
+        devtoolsEnabled: true, // Vue.config.devtools,
         vueDetected: true
       }, '*')
     }
