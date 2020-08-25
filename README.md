@@ -69,8 +69,15 @@ To enable this feature, follow [this guide](./docs/open-in-editor.md).
 	$ npm run run:firefox
 	~~~~
 
-	When using Yarn, just replace `npm` with `yarn`.
-
+To sign xpi with FF:
+https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/
+You need to get API keys from https://addons.mozilla.org/en-US/developers/addon/api/key/
+And add them to a `.env` file like:
+```
+VUE_DEVTOOLS_AMO_KEY=
+VUE_DEVTOOLS_AMO_SECRET=
+```
+Then run `npm run sign:firefox`
 
 ### Common problems and how to fix
 
